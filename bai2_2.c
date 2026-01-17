@@ -20,6 +20,7 @@
 // o X2 = (-b – căn(delta))/(2*a)
 
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     float a=0, b=0, c=0;
@@ -40,7 +41,7 @@ int main() {
             float x = -b / (2 * a);
             printf("Phương trình có nghiệm kép x = %.2f", x);
         } else {
-            float x1 = (-b + sqrt(delta)) / (2 * a);
+            float x1 = (-b + sqrt(delta)) / (2 * a);//sprt là hàm căn bậc hai
             float x2 = (-b - sqrt(delta)) / (2 * a);
             printf("Phương trình có hai nghiệm phân biệt: x1 = %.2f, x2 = %.2f", x1, x2);
         }
