@@ -17,14 +17,21 @@
  
 #include <stdio.h>
 
-int main(){
-    
-    // Khai báo biến
-
-
-    // Nhập dữ liệu
-
-
-    // Xử lý, tính toán VÀ Hiển thị kết quả
-
+int main() {
+    float a=0, b=0;
+    printf("Nhập số a: ");
+    scanf("%f", &a);
+    printf("Nhập số b: ");
+    scanf("%f", &b);
+    if (a == 0) {
+        if (b == 0) {
+            printf("Phương trình có vô số nghiệm.");
+        } else {
+            printf("Phương trình vô nghiệm.");
+        }
+    } else {
+        float x = -b / a;
+        printf("Nghiệm của phương trình là x = %.2f", x);
+    }
+    return 0;
 }

@@ -17,15 +17,38 @@
 
 #include <stdio.h>
 
-int main(){
+int main() {
+    float diem;
+    printf("Nhập điểm sinh viên (0 - 10): ");
+    scanf("%f", &diem);
+    if (diem < 0 || diem > 10) {
+        printf("Điểm không hợp lệ!\nNhập lại điểm: ");
+        scanf("%f", &diem);
+         if (diem >= 9)
+        printf("Học lực: Xuất sắc");
+    else if (diem >= 8)
+        printf("Học lực: Giỏi");
+    else if (diem >= 6.5)
+        printf("Học lực: Khá");
+    else if (diem >= 5)
+        printf("Học lực: Trung bình");
+    else if (diem >= 3.5)
+        printf("Học lực: Yếu");
+    else
+        printf("Học lực: Kém");
 
-    // Khai báo biến
-
-
-    // Nhập dữ liệu
-
-
-    // Xử lý, tính toán VÀ Hiển thị kết quả
+    } else if (diem >= 9)
+        printf("Học lực: Xuất sắc");
+    else if (diem >= 8)
+        printf("Học lực: Giỏi");
+    else if (diem >= 6.5)
+        printf("Học lực: Khá");
+    else if (diem >= 5)
+        printf("Học lực: Trung bình");
+    else if (diem >= 3.5)
+        printf("Học lực: Yếu");
+    else
+        printf("Học lực: Kém");
 
     return 0;
 }
