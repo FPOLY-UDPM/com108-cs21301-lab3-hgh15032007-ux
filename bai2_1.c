@@ -24,12 +24,12 @@ int main() {
     printf("Nhập số b: ");
     scanf("%f", &b);
     if (a == 0) {
-        if (b == 0) {
+        if (b == 0) { // a == 0 và b == 0
             printf("Phương trình có vô số nghiệm.");
-        } else {
+        } else { // a == 0 và b != 0
             printf("Phương trình vô nghiệm.");
         }
-    } else {
+    } else { // a != 0
         float x = -b / a;
         printf("Nghiệm của phương trình là x = %.2f", x);
     }

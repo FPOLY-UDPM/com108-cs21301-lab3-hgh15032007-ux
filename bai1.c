@@ -20,24 +20,24 @@
 int main() {
     float diem;
     printf("Nhập điểm sinh viên (0 - 10): ");
-    scanf("%f", &diem);
+    scanf("%f", &diem);//Nhập điểm
     if (diem < 0 || diem > 10) {
         printf("Điểm không hợp lệ!\nNhập lại điểm: ");
-        scanf("%f", &diem);
+        scanf("%f", &diem);//Nhập lại điểm nếu điểm không hợp lệ
          if (diem >= 9)
-        printf("Học lực: Xuất sắc");
-    else if (diem >= 8)
-        printf("Học lực: Giỏi");
-    else if (diem >= 6.5)
-        printf("Học lực: Khá");
-    else if (diem >= 5)
-        printf("Học lực: Trung bình");
-    else if (diem >= 3.5)
-        printf("Học lực: Yếu");
-    else
-        printf("Học lực: Kém");
+         printf("Học lực: Xuất sắc");
+         else if (diem >= 8)
+         printf("Học lực: Giỏi");
+         else if (diem >= 6.5)
+         printf("Học lực: Khá");
+         else if (diem >= 5)
+         printf("Học lực: Trung bình");
+         else if (diem >= 3.5)
+         printf("Học lực: Yếu");
+         else
+         printf("Học lực: Kém");
 
-    } else if (diem >= 9)
+    } else if (diem >= 9)// Điểm hợp lệ chạy tiếp chương trình
         printf("Học lực: Xuất sắc");
     else if (diem >= 8)
         printf("Học lực: Giỏi");

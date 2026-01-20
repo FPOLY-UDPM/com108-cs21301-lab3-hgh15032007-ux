@@ -20,7 +20,7 @@
 // o X2 = (-b – căn(delta))/(2*a)
 
 #include <stdio.h>
-#include <math.h>
+#include <math.h> //Thư viện toán học
 
 int main() {
     float a=0, b=0, c=0;
@@ -30,7 +30,7 @@ int main() {
     scanf("%f", &b);
     printf("Nhập số c: ");
     scanf("%f", &c);
-    if (a == 0) {
+    if (a == 0) {//Phương trình bậc nhất
         float x = -c / b;//Nghiệm phương trình bậc nhất
         printf("Phương trình bậc nhất có nghiệm x = %.2f", x);
     } else if (a != 0) {//Nghiệm phương trình bậc hai
@@ -48,3 +48,9 @@ int main() {
     }
     return 0;
 }
+//Hàm lượng giác: sin(x), cos(x), tan(x); asin(x), acos(x), atan(x)
+//Hàm mũ và logarit: exp(x), log(x), log10(x)
+//Hàm làm tròn: ceil(x), floor(x), round(x)
+//Hàm giá trị tuyệt đối: fabs(x)
+//Hàm lũy thừa: pow(x, y)
+//Căn bậc hai: sqrt(x)
