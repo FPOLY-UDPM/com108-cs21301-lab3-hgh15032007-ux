@@ -20,15 +20,46 @@
 // o X2 = (-b – căn(delta))/(2*a)
 
 #include <stdio.h>
+#include <math.h> //Thư viện toán học
 
-int main(){
-    
-    // Khai báo biến
-
-
-    // Nhập dữ liệu
-
-
-    // Xử lý, tính toán VÀ Hiển thị kết quả
-
+int main() {
+    float a=0, b=0, c=0;
+    printf("Nhập số a: ");
+    scanf("%f", &a);
+    printf("Nhập số b: ");
+    scanf("%f", &b);
+    printf("Nhập số c: ");
+    scanf("%f", &c);
+    if (a == 0) {//Phương trình bậc nhất
+        float x = -c / b;//Nghiệm phương trình bậc nhất
+    if (b == 0) {
+            if (c == 0) {
+                printf("Phương trình có vô số nghiệm.");
+            } else {//c != 0
+                printf("Phương trình vô nghiệm.");
+            }
+        } else {//b != 0
+                printf("Phương trình có nghiệm x = %.2f", x);
+            }
+                
+         } else if (a != 0) {//Nghiệm phương trình bậc hai
+        float delta = b * b - 4 * a * c;//tính delta
+        if (delta < 0) {//vô nghiệm
+            printf("Phương trình vô nghiệm.");
+        } else if (delta == 0) {//nghiệm kép
+            float x = -b / (2 * a);
+            printf("Phương trình có nghiệm kép x = %.2f", x);
+        } else {
+            float x1 = (-b + sqrt(delta)) / (2 * a);//sprt là hàm căn bậc hai
+            float x2 = (-b - sqrt(delta)) / (2 * a);
+            printf("Phương trình có hai nghiệm phân biệt: x1 = %.2f, x2 = %.2f", x1, x2);
+        }
+    }
+    return 0;
 }
+//Hàm lượng giác: sin(x), cos(x), tan(x); asin(x), acos(x), atan(x)
+//Hàm mũ và logarit: exp(x), log(x), log10(x)
+//Hàm làm tròn: ceil(x), floor(x), round(x)
+//Hàm giá trị tuyệt đối: fabs(x)
+//Hàm lũy thừa: pow(x, y)
+//Căn bậc hai: sqrt(x)
