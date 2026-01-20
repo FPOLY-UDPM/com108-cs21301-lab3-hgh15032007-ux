@@ -61,8 +61,17 @@ printf ("Bài 2_2:Chương trình giải phương trình bậc 2\n");
     scanf("%f", &c);
     if (a == 0) {//Phương trình bậc nhất
         float x = -c / b;//Nghiệm phương trình bậc nhất
-        printf("Phương trình bậc nhất có nghiệm x = %.2f", x);
-    } else if (a != 0) {//Nghiệm phương trình bậc hai
+    if (b == 0) {
+            if (c == 0) {
+                printf("Phương trình có vô số nghiệm.");
+            } else {//c != 0
+                printf("Phương trình vô nghiệm.");
+            }
+        } else {//b != 0
+                printf("Phương trình có nghiệm x = %.2f", x);
+            }
+                
+         } else if (a != 0) {//Nghiệm phương trình bậc hai
         float delta = b * b - 4 * a * c;//tính delta
         if (delta < 0) {//vô nghiệm
             printf("Phương trình vô nghiệm.");
@@ -70,36 +79,46 @@ printf ("Bài 2_2:Chương trình giải phương trình bậc 2\n");
             float x = -b / (2 * a);
             printf("Phương trình có nghiệm kép x = %.2f", x);
         } else {
-            float x1 = (-b + sqrt(delta)) / (2 * a);//sqrt là hàm căn bậc hai
+            float x1 = (-b + sqrt(delta)) / (2 * a);//sprt là hàm căn bậc hai
             float x2 = (-b - sqrt(delta)) / (2 * a);
             printf("Phương trình có hai nghiệm phân biệt: x1 = %.2f, x2 = %.2f", x1, x2);
         }
     }
-
 }
 void bai3() {
     printf ("Bài 3: Chương trình tính tiền điện.\n");
-    float So_dien=0;
+    int So_dien;
+    float a, b, c, d, e, f;
+
     printf("Nhập số điện tiêu thụ: ");
-    scanf("%f", &So_dien);
+    scanf("%d", &So_dien);
+
+    // Tính toán các mốc tiền cố định (Lũy kế từng bậc)
+    a = So_dien * 1.678; 
+    b = (50 * 1.678) + (So_dien - 50) * 1.734;
+    c = (50 * 1.678) + (50 * 1.734) + (So_dien - 100) * 2.014;
+    d = (50 * 1.678) + (50 * 1.734) + (100 * 2.014) + (So_dien - 200) * 2.536;
+    e = (50 * 1.678) + (50 * 1.734) + (100 * 2.014) + (100 * 2.536) + (So_dien - 300) * 2.834;
+    f = (50 * 1.678) + (50 * 1.734) + (100 * 2.014) + (100 * 2.536) + (100 * 2.834) + (So_dien - 400) * 2.927;
+
     if (So_dien < 0) {
-        printf("Số điện không hợp lệ!\nNhập lại số điện: ");
-        scanf("%f kWh", &So_dien);
-    }else if (So_dien <= 50) {
-        printf("Số tiền cần phải đóng là: %.2f VNĐ", So_dien * 1.678);
+        printf("Số điện không hợp lệ!\n");
+    } else if (So_dien <= 50) {
+        printf("Số tiền điện cần đóng là: %.3f đồng", a);
     } else if (So_dien <= 100) {
-        printf("Số tiền cần phải đóng là: %.2f VNĐ", So_dien * 1.734);
+        printf("Số tiền điện cần đóng là: %.3f đồng", b);
     } else if (So_dien <= 200) {
-        printf("Số tiền cần phải đóng là: %.2f VNĐ", So_dien * 2.014);
+        printf("Số tiền điện cần đóng là: %.3f đồng", c);
     } else if (So_dien <= 300) {
-        printf("Số tiền cần phải đóng là: %.2f VNĐ", So_dien * 2.536);
+        printf("Số tiền điện cần đóng là: %.3f đồng", d);
     } else if (So_dien <= 400) {
-        printf("Số tiền cần phải đóng là: %.2f VNĐ", So_dien * 2.834);
-    } else if (So_dien > 400) {
-        printf("Số tiền cần phải đóng là: %.2f VNĐ", So_dien * 2.927);
+        printf("Số tiền điện cần đóng là: %.3f đồng", e);
+    } else {
+        printf("Số tiền điện cần đóng là: %.3f đồng", f);
+    }
     }
 
-}
+
 
 
 int main() {
