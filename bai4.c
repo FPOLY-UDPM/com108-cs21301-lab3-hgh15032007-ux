@@ -18,10 +18,9 @@ int main(void) {
     int choice;
     printf("Menu Chương Trình:\n");
     printf("1. Bai 1\n");
-    printf("2. Bai 2.1\n");
-    printf("3. Bai 2.2\n");
-    printf("4. Bai 3\n");
-    printf("5. Bai 4\n");
+    printf("2. Bai 2_1 hoặc 2_2\n");
+    printf("3. Bai 3\n");
+    printf("4. Bai 4\n");
     scanf("%d", &choice);   
     switch (choice) {
         case 1:
@@ -29,7 +28,7 @@ int main(void) {
             break;
         case 2:{
         int subChoice;
-        printf("Nhập bài (1 hoặc 2): ");
+        printf("Nhập bài (1 = bai2_1 hoặc 2 = bai2_2): ");
         scanf("%d", &subChoice);
         switch (subChoice) {
             case 1:
@@ -39,7 +38,7 @@ int main(void) {
                 bai2_2();
                 break;
             default:
-                printf("Bài con không hợp lệ");
+                printf("Bài không hợp lệ");
         }
             break;
     }
