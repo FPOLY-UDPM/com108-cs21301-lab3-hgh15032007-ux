@@ -32,8 +32,18 @@ int main() {
     scanf("%f", &c);
     if (a == 0) {//Phương trình bậc nhất
         float x = -c / b;//Nghiệm phương trình bậc nhất
-        printf("Phương trình bậc nhất có nghiệm x = %.2f", x);
-    } else if (a != 0) {//Nghiệm phương trình bậc hai
+     printf("Phương trình bậc nhất có nghiệm x = %.2f\n", x);
+    if (b == 0) {
+            if (c == 0) {
+                printf("Phương trình có vô số nghiệm.");
+            } else {//c != 0
+                printf("Phương trình vô nghiệm.");
+            }
+            } else {//b != 0
+                printf("Phương trình có nghiệm x = %.2f", x);
+            }
+                
+         } else if (a != 0) {//Nghiệm phương trình bậc hai
         float delta = b * b - 4 * a * c;//tính delta
         if (delta < 0) {//vô nghiệm
             printf("Phương trình vô nghiệm.");
